@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortnite Duo Finder — FindUrDuo</title>
+  <meta name="description" content="Find your perfect Fortnite duo or squad. Match by skill, playstyle, and game mode.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/webp" href="../Fotos/valorant.webp">
+</head>
+<body class="game-fortnite">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">D</div>
+        FindUrDuo
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-dropdown-trigger active">
+            Games
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="valorant.html"><img src="../Fotos/valorant.webp" class="game-dot-img" alt="">Valorant</a>
+            <a href="rocket-league.html"><img src="../Fotos/rocket-league-true.webp" class="game-dot-img" alt="">Rocket League</a>
+            <a href="apex-legends.html"><img src="../Fotos/Apex_legends_simple_logo.jpg" class="game-dot-img" alt="">Apex Legends</a>
+            <a href="fortnite.html"><img src="../Fotos/Fortnite_F_lettermark_logo.png" class="game-dot-img" alt="">Fortnite</a>
+            <a href="cs2.html"><span class="game-dot" style="background:#de9b35"></span>CS2</a>
+          </div>
+        </li>
+        <li><a href="../index.html#community">Community</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="../login.html" class="btn-ghost" id="nav-login">Log In</a>
+        <a href="../login.html?mode=signup" class="btn-primary" id="nav-signup">Sign Up</a>
+        <div id="user-menu" style="display: none; align-items: center; gap: 16px;">
+          <a href="../profile.html" id="user-name" style="font-size: 14px; font-weight: 600; color: var(--accent-soft); transition: opacity 0.2s;"></a>
+          <button class="btn-ghost" id="nav-logout" style="padding: 4px 8px;">Log Out</button>
+        </div>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== GAME HERO ===== -->
+  <section class="game-hero">
+    <div class="game-hero-inner">
+      <div class="game-hero-text fade-up">
+        <div class="game-tag">Fortnite</div>
+        <h1>Find your <span>Fortnite</span> duo</h1>
+        <p>Whether you're cranking 90s in ranked or just vibing in pubs, find a teammate who matches your energy. Builders, fighters, creative warriors — everyone's welcome.</p>
+        <div class="hero-actions" style="justify-content:flex-start">
+          <button class="btn-large primary">Find Fortnite Players</button>
+          <button class="btn-large secondary">Browse Profiles</button>
+        </div>
+        <div class="game-hero-stats">
+          <div class="stat-item">
+            <div class="stat-num" data-count="22700" data-suffix="">0</div>
+            <div class="stat-label">Online now</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-count="56000" data-suffix="+">0</div>
+            <div class="stat-label">Players total</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-count="11400" data-suffix="">0</div>
+            <div class="stat-label">Duos formed</div>
+          </div>
+        </div>
+      </div>
+      <div class="game-hero-visual fade-up">
+        <div class="player-card">
+          <div class="player-avatar" style="background:linear-gradient(135deg,#2a65f0,#1e4abd)">C</div>
+          <div class="player-info">
+            <div class="player-top">
+              <span class="player-name">CrankKing</span>
+              <span class="player-rank rank-champ">Champion</span>
+            </div>
+            <span class="player-meta">Builder <span class="status-sep">·</span> Zero Build + Build <span class="status-sep">·</span> NA East</span>
+          </div>
+          <div class="player-tags">
+            <span class="player-tag">Aggro</span>
+            <span class="player-tag">Ranked</span>
+          </div>
+          <div class="player-card-status status-online"></div>
+        </div>
+        <div class="player-card">
+          <div class="player-avatar" style="background:linear-gradient(135deg,#f59e0b,#eab308)">Z</div>
+          <div class="player-info">
+            <div class="player-top">
+              <span class="player-name">ZeroBuildZoe</span>
+              <span class="player-rank rank-diamond">Diamond</span>
+            </div>
+            <span class="player-meta">Fighter <span class="status-sep">·</span> Zero Build <span class="status-sep">·</span> EU West</span>
+          </div>
+          <div class="player-tags">
+            <span class="player-tag">No build</span>
+            <span class="player-tag">Chill</span>
+          </div>
+          <div class="player-card-status status-online"></div>
+        </div>
+        <div class="player-card">
+          <div class="player-avatar" style="background:linear-gradient(135deg,#ec4899,#8b5cf6)">T</div>
+          <div class="player-info">
+            <div class="player-top">
+              <span class="player-name">TrickShotTina</span>
+              <span class="player-rank rank-gold">Gold</span>
+            </div>
+            <span class="player-meta">All-round <span class="status-sep">·</span> Duos / Squads <span class="status-sep">·</span> BR</span>
+          </div>
+          <div class="player-tags">
+            <span class="player-tag">Creative</span>
+            <span class="player-tag">Fun</span>
+          </div>
+          <div class="player-card-status status-idle"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ===== PLAYSTYLES ===== -->
+  <section>
+    <div class="container">
+      <div class="section-header center fade-up">
+        <div class="section-label">Playstyles</div>
+        <h2 class="section-title">Every type of player</h2>
+        <p class="section-desc">From build fights to zero build, from sweaty ranked to casual pubs — find your vibe.</p>
+      </div>
+      <div class="roles-grid">
+        <div class="role-card fade-up">
+          <div class="role-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h3>Builder</h3>
+          <p>90s, tunneling, high-ground retakes. Build fights are their language.</p>
+        </div>
+        <div class="role-card fade-up">
+          <div class="role-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Fighter</h3>
+          <p>Pure aim and positioning. Zero build or build — they win their 1v1s.</p>
+        </div>
+        <div class="role-card fade-up">
+          <div class="role-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3>Support</h3>
+          <p>Keeps the squad alive. Carries heals, shares loot, calls rotations.</p>
+        </div>
+        <div class="role-card fade-up">
+          <div class="role-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3>Casual</h3>
+          <p>Just here for a good time. Pubs, creative, LTMs — no stress, pure fun.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ===== GAME MODES ===== -->
+  <section style="background:var(--bg-base)">
+    <div class="container">
+      <div class="section-header center fade-up">
+        <div class="section-label">Game Modes</div>
+        <h2 class="section-title">Find duos for any mode</h2>
+        <p class="section-desc">Whether you're grinding ranked or messing around in creative, we've got you covered.</p>
+      </div>
+      <div class="features-grid" style="grid-template-columns:repeat(4,1fr)">
+        <div class="feature-card fade-up">
+          <div class="feature-icon game">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Ranked</h3>
+          <p>Serious competitive play. Find teammates who are grinding for Champion.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon game">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h3>Zero Build</h3>
+          <p>All aim, no builds. Find players who thrive in the no-build meta.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon game">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Squads</h3>
+          <p>Full team finder. Build a 4-stack for pubs or ranked squads.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon game">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
+          <h3>Creative</h3>
+          <p>Box fights, zone wars, free building — find practice partners and creative buddies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container fade-up">
+      <h2>Get that Victory Royale together.</h2>
+      <p>No more random fill. Find a duo who actually lands with you and sticks through the endgame.</p>
+      <div class="hero-actions">
+        <button class="btn-large primary">Find My Duo</button>
+        <button class="btn-large secondary">Browse Fortnite Players</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo"><div class="logo-icon">D</div>FindUrDuo</a>
+          <p>The simplest way to find a teammate who actually fits. Built by gamers, for gamers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Games</h4>
+          <ul>
+            <li><a href="valorant.html">Valorant</a></li>
+            <li><a href="rocket-league.html">Rocket League</a></li>
+            <li><a href="apex-legends.html">Apex Legends</a></li>
+            <li><a href="fortnite.html">Fortnite</a></li>
+            <li><a href="cs2.html">CS2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul><li><a href="#">Discord</a></li><li><a href="#">Twitter / X</a></li><li><a href="#">Reddit</a></li></ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Contact</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FindUrDuo. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
