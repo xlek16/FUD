@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valorant Duo Finder — FindUrDuo</title>
+  <meta name="description" content="Find your perfect Valorant duo. Match with players by rank, agent preference, and playstyle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="icon" type="image/webp" href="../Fotos/valorant.webp">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="game-valorant">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="../index.html" class="logo">
+        <div class="logo-icon">D</div>
+        FindUrDuo
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-dropdown-trigger active">
+            Games
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="valorant.html"><img src="../Fotos/valorant.webp" class="game-dot-img" alt="">Valorant</a>
+            <a href="rocket-league.html"><img src="../Fotos/rocket-league-true.webp" class="game-dot-img" alt="">Rocket League</a>
+            <a href="apex-legends.html"><img src="../Fotos/Apex_legends_simple_logo.jpg" class="game-dot-img" alt="">Apex Legends</a>
+            <a href="fortnite.html"><img src="../Fotos/Fortnite_F_lettermark_logo.png" class="game-dot-img" alt="">Fortnite</a>
+            <a href="cs2.html"><span class="game-dot" style="background:#de9b35"></span>CS2</a>
+          </div>
+        </li>
+        <li><a href="../index.html#community">Community</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="../login.html" class="btn-ghost" id="nav-login">Log In</a>
+        <a href="../login.html?mode=signup" class="btn-primary" id="nav-signup">Sign Up</a>
+        <div id="user-menu" style="display: none; align-items: center; gap: 16px;">
+          <a href="../profile.html" id="user-name" style="font-size: 14px; font-weight: 600; color: var(--accent-soft); transition: opacity 0.2s;"></a>
+          <button class="btn-ghost" id="nav-logout" style="padding: 4px 8px;">Log Out</button>
+        </div>
+      </div>
+      <button class="mobile-toggle" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== GAME HERO ===== -->
+  <section class="game-hero">
+    <div class="game-hero-inner">
+      <div class="game-hero-text fade-up">
+        <div class="game-tag">Valorant</div>
+        <h1>Find your <span>Valorant</span> duo</h1>
+        <p>Whether you're a Jett one-trick or a Brimstone main, find teammates who match your rank, your playstyle, and your vibe. No more instalock duelists stealing your agent.</p>
+        <div class="hero-actions" style="justify-content:flex-start">
+          <a href="../find-players.html?game=valorant" class="btn-large primary">Find Valorant Players</a>
+          <a href="../find-players.html?game=valorant" class="btn-large secondary">Browse Profiles</a>
+        </div>
+        <div class="game-hero-stats">
+          <div class="stat-item">
+            <div class="stat-num" data-count="18400" data-suffix="">0</div>
+            <div class="stat-label">Online now</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-count="42000" data-suffix="+">0</div>
+            <div class="stat-label">Players total</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-count="8900" data-suffix="">0</div>
+            <div class="stat-label">Duos formed</div>
+          </div>
+        </div>
+      </div>
+      <div class="game-hero-visual fade-up">
+        <div class="player-card">
+          <div class="player-avatar" style="background:linear-gradient(135deg,#ff4655,#bd364a)">J</div>
+          <div class="player-info">
+            <div class="player-top">
+              <span class="player-name">xJettSetGo</span>
+              <span class="player-rank rank-immortal"><img src="https://vpdgphvxzqatgzihibzy.supabase.co/storage/v1/object/public/Valorant/Immortal_3_Rank.webp" class="rank-icon-mini" alt=""> Immortal</span>
+            </div>
+            <span class="player-meta">Duelist <span class="status-sep">·</span> Jett / Raze <span class="status-sep">·</span> EU West</span>
+          </div>
+          <div class="player-tags">
+            <span class="player-tag">Aggro</span>
+            <span class="player-tag">Ranked</span>
+          </div>
+          <div class="player-card-status status-online"></div>
+        </div>
+        <div class="player-card">
+          <div class="player-avatar" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)">V</div>
+          <div class="player-info">
+            <div class="player-top">
+              <span class="player-name">ViperousMind</span>
+              <span class="player-rank rank-diamond"><img src="https://vpdgphvxzqatgzihibzy.supabase.co/storage/v1/object/public/Valorant/Diamond_3_Rank.webp" class="rank-icon-mini" alt=""> Diamond</span>
+            </div>
+            <span class="player-meta">Controller <span class="status-sep">·</span> Viper / Omen <span class="status-sep">·</span> NA East</span>
+          </div>
+          <div class="player-tags">
+            <span class="player-tag">IGL</span>
+            <span class="player-tag">Late night</span>
+          </div>
+          <div class="player-card-status status-online"></div>
+        </div>
+        <div class="player-card">
+          <div class="player-avatar" style="background:linear-gradient(135deg,#10b981,#06b6d4)">S</div>
+          <div class="player-info">
+            <div class="player-top">
+              <span class="player-name">SovaScanner</span>
+              <span class="player-rank rank-plat"><img src="https://vpdgphvxzqatgzihibzy.supabase.co/storage/v1/object/public/Valorant/Platinum_3_Rank.webp" class="rank-icon-mini" alt=""> Platinum</span>
+            </div>
+            <span class="player-meta">Initiator <span class="status-sep">·</span> Sova / Fade <span class="status-sep">·</span> EUW</span>
+          </div>
+          <div class="player-tags">
+            <span class="player-tag">Support</span>
+            <span class="player-tag">Chill</span>
+          </div>
+          <div class="player-card-status status-idle"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ===== PLAYER LIST SECTION ===== -->
+  <section id="players-list-section" style="padding: 80px 0; background: var(--bg-base);">
+    <div class="container">
+      <div class="section-header center fade-up">
+        <div class="section-label">Player Statistics</div>
+        <h2 class="section-title">Rank Distribution</h2>
+        <p class="section-desc">See how many players are in each rank on FindUrDuo.</p>
+        
+        <div id="rank-chart-wrapper" style="max-width: 700px; margin: 48px auto 0; background: #0f1722; padding: 24px; border-radius: 16px; border: 1px solid rgba(255, 70, 85, 0.1); box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+          <canvas id="rankDistributionChart"></canvas>
+        </div>
+      </div>
+
+      <div class="section-header center fade-up" style="margin-top: 80px;">
+        <div class="section-label">Available Players</div>
+        <h2 class="section-title">Match with existing <span>Valorant</span> duos</h2>
+        <p class="section-desc">These are real players currently looking for a teammate. Click on a card to see their full profile and agents.</p>
+      </div>
+
+      <div id="valorant-players-grid" class="players-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; margin-top: 48px;">
+        <!-- Dynamic players will be loaded here -->
+        <div class="spinner-container" style="grid-column: 1/-1; display: flex; justify-content: center; padding: 40px;">
+          <div class="spinner"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ===== ROLES ===== -->
+  <section>
+    <div class="container">
+      <div class="section-header center fade-up">
+        <div class="section-label">Agent Roles</div>
+        <h2 class="section-title">Find players by role</h2>
+        <p class="section-desc">Search for teammates who complement your agent picks. Every role matters when it's match point.</p>
+      </div>
+      <div class="roles-grid">
+        <div class="role-card fade-up">
+          <div class="role-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3>Duelist</h3>
+          <p>Entry fraggers. Jett, Raze, Reyna, Neon, Iso, Yoru.</p>
+        </div>
+        <div class="role-card fade-up">
+          <div class="role-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <h3>Controller</h3>
+          <p>Map control. Omen, Brimstone, Viper, Astra, Harbor, Clove.</p>
+        </div>
+        <div class="role-card fade-up">
+          <div class="role-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3>Initiator</h3>
+          <p>Intel gatherers. Sova, Fade, Breach, Skye, KAY/O, Gekko.</p>
+        </div>
+        <div class="role-card fade-up">
+          <div class="role-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Sentinel</h3>
+          <p>Anchors. Killjoy, Cypher, Sage, Chamber, Deadlock.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ===== RANKS ===== -->
+  <section style="background:var(--bg-base)">
+    <div class="container">
+      <div class="section-header center fade-up">
+        <div class="section-label">Rank Tiers</div>
+        <h2 class="section-title">Match with players at your level</h2>
+        <p class="section-desc">From Iron to Radiant — find duos within your rank range. No boosters, no smurfs, just fair matches.</p>
+      </div>
+      <div class="ranks-display fade-up">
+        <div class="rank-item">
+          <div class="rank-badge-img"><img src="https://vpdgphvxzqatgzihibzy.supabase.co/storage/v1/object/public/Valorant/Iron_3_Rank.webp" alt="Iron"></div>
+          <span>Iron</span>
+        </div>
+        <div class="rank-item">
+          <div class="rank-badge-img"><img src="https://vpdgphvxzqatgzihibzy.supabase.co/storage/v1/object/public/Valorant/Bronze_3_Rank.webp" alt="Bronze"></div>
+          <span>Bronze</span>
+        </div>
+        <div class="rank-item">
+          <div class="rank-badge-img"><img src="https://vpdgphvxzqatgzihibzy.supabase.co/storage/v1/object/public/Valorant/Silver_3_Rank.webp" alt="Silver"></div>
+          <span>Silver</span>
+        </div>
+        <div class="rank-item">
+          <div class="rank-badge-img"><img src="https://vpdgphvxzqatgzihibzy.supabase.co/storage/v1/object/public/Valorant/Gold_3_Rank.webp" alt="Gold"></div>
+          <span>Gold</span>
+        </div>
+        <div class="rank-item">
+          <div class="rank-badge-img"><img src="https://vpdgphvxzqatgzihibzy.supabase.co/storage/v1/object/public/Valorant/Platinum_3_Rank.webp" alt="Platinum"></div>
+          <span>Platinum</span>
+        </div>
+        <div class="rank-item">
+          <div class="rank-badge-img"><img src="https://vpdgphvxzqatgzihibzy.supabase.co/storage/v1/object/public/Valorant/Diamond_3_Rank.webp" alt="Diamond"></div>
+          <span>Diamond</span>
+        </div>
+        <div class="rank-item">
+          <div class="rank-badge-img"><img src="https://vpdgphvxzqatgzihibzy.supabase.co/storage/v1/object/public/Valorant/Ascendant_3_Rank.webp" alt="Ascendant"></div>
+          <span>Ascendant</span>
+        </div>
+        <div class="rank-item">
+          <div class="rank-badge-img"><img src="https://vpdgphvxzqatgzihibzy.supabase.co/storage/v1/object/public/Valorant/Immortal_3_Rank.webp" alt="Immortal"></div>
+          <span>Immortal</span>
+        </div>
+        <div class="rank-item">
+          <div class="rank-badge-img"><img src="https://vpdgphvxzqatgzihibzy.supabase.co/storage/v1/object/public/Valorant/Radiant_Rank.webp" alt="Radiant"></div>
+          <span>Radiant</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ===== FEATURES ===== -->
+  <section>
+    <div class="container">
+      <div class="section-header center fade-up">
+        <div class="section-label">Valorant Features</div>
+        <h2 class="section-title">Built for Valorant players</h2>
+        <p class="section-desc">Every filter, every tag, every feature designed around how Valorant players actually find teammates.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card fade-up">
+          <div class="feature-icon game">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>Agent-based profiles</h3>
+          <p>Show your main agents, backup picks, and role preferences. Teammates know exactly what you play.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon game">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3>Verified competitive rank</h3>
+          <p>Link your Riot account to verify your rank automatically. No lying about being Immortal.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon game">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+          </div>
+          <h3>Map preferences</h3>
+          <p>Hate Breeze? Only play Ascent? Filter players who share your map pool.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon game">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <h3>Pre-game comms check</h3>
+          <p>Filter by mic preference. Find players who comm, or respect the peaceful silence.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon game">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </div>
+          <h3>Clip showcase</h3>
+          <p>Pin your best Valorant clips. Aces, clutches, 1v5s — let your gameplay do the talking.</p>
+        </div>
+        <div class="feature-card fade-up">
+          <div class="feature-icon game">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Schedule matching</h3>
+          <p>Set your play hours. Match with people who are actually online when you want to grind.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="cta-section">
+    <div class="container fade-up">
+      <h2>Your Valorant duo is waiting.</h2>
+      <p>Stop solo queuing into randoms. Create your profile, pick your agents, and find a teammate who actually comms.</p>
+      <div class="hero-actions">
+        <button class="btn-large primary">Find My Duo</button>
+        <button class="btn-large secondary">Browse Valorant Players</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">
+            <div class="logo-icon">D</div>
+            FindUrDuo
+          </a>
+          <p>The simplest way to find a teammate who actually fits. Built by gamers, for gamers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Games</h4>
+          <ul>
+            <li><a href="valorant.html">Valorant</a></li>
+            <li><a href="rocket-league.html">Rocket League</a></li>
+            <li><a href="apex-legends.html">Apex Legends</a></li>
+            <li><a href="fortnite.html">Fortnite</a></li>
+            <li><a href="cs2.html">CS2</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="#">Discord</a></li>
+            <li><a href="#">Twitter / X</a></li>
+            <li><a href="#">Reddit</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FindUrDuo. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.095 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/games/valorant.js"></script>
+</body>
+</html>
