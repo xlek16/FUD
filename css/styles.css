@@ -1429,7 +1429,8 @@ section {
 
 .player-card-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 16px;
   align-items: center;
   margin-top: auto;
   padding-top: 12px;
@@ -1443,7 +1444,6 @@ section {
   font-size: 11px;
   font-weight: 600;
   color: #10b981; /* Green */
-  margin-left: auto; /* Push to the right end */
 }
 
 .game-tag-mini {
